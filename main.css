@@ -23,3 +23,116 @@ nav{
     margin: auto;
     overflow: hidden;
 }
+/* style diary entry div */
+#diaryEntryDisplay{
+    margin:10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+}
+/* style diary entry inputs in the div */
+#diaryEntryDisplay input[type=text],textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+/* style header elements in the menu bar */
+header{
+    background: #35424a;
+    padding-top: 10px;
+    min-height: 40px;
+    border-bottom: #e8491d 3px solid;
+}
+header nav ul li a{
+    color:#ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header nav ul{
+    margin: 0;
+    padding: 0;
+    float:right;
+    margin-top: 10px;
+}
+header nav ul li{
+    display:inline;
+    padding: 0 20px 0 20px;
+}
+header #branding{float: left;}
+header #branding h1{margin: 0;}
+.diaryEntryDisplay{
+color: #000;
+}
+/* style table home page display all the content */
+table{
+    border: 1px solid rgba(83, 4, 231, 0.849);
+    margin-top: 5px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+}
+td{text-align: left;}
+
+
+/* class for styling */
+.signLogFooter{
+    margin-top: 30px;
+    color: #ff267e;
+
+}
+/* class for styling */
+.signLogStyle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #444;
+    background: rgba(0,0,0,0.6);
+    width: 350px;
+    box-sizing: border-box;
+    border: 3px solid #444;
+    height: 400px;
+    padding: 40px;
+}
+/* class for styling headings */
+.styleheading{
+    color:#ff267e;
+    text-align: center;}
+
+/* class for styling paragraphs */
+.stylepara{
+    color:#fff;
+    font-weight: bold;
+    margin: 0;
+    padding:4px;
+}
+/* style input of type specified */
+input[type="email"],input[type="password"],input[type="text"]{
+    border: none;
+    border-bottom:1px solid #fff;
+    background: transparent;
+    height: 30px;
+    color: #fff;
+}
+input[type="submit"]{
+    color: #fff;
+    background-color: #ff267e;
+    border: none;
+    border-radius: 20px;
+}
+/* style all the links */
+a{
+    text-decoration: none;
+    font-size:16px;
+    color:#d134bc;
+}
+/* style all the links hover action */
+a:hover {
+    color: blue
+}
+
