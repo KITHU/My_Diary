@@ -1,4 +1,25 @@
 /* this file will style all the html elements for this app */
-body{
-    background: bisque;
+
+/* body styling*/
+body {
+    margin: 0;
+    padding: 0;                                 
+    background-image: url("backg2.jpg");
+    background-size: cover;
+    font-family: sans-serif;
+
+}
+/* nav styling*/
+nav{
+    margin: 0;
+    padding: 0;
+    color:rgba(233, 219, 20, 0.856);
+    background: #fff;
+    width: 100%;
+} 
+/* container styling*/
+#container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
