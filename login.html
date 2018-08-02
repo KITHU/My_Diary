@@ -12,14 +12,14 @@
 <body>
     <div class="signLogStyle">
         <h2 class="styleheading">log In Here</h2>
-        <form>
+        <form >
             <P class="stylepara">Email</P>
-            <input type="email" id="email" name="email" required placeholder="somebody@andela.com">
+            <input type="email" id="email" name="email" placeholder="somebody@andela.com" required>
         
             <P class="stylepara">Password</P>
             <input type="password" id="password" name="password" required>
             <div class="signLogFooter">
-                <input type="submit" value="Sign In">
+                <input type="button" value="Sign In" onclick="login()"> 
                 <input type="checkbox"><label for="checkbox">Keep me logged in</label>
                 
             
@@ -27,7 +27,7 @@
             </div>
         </form>
     </div>
-
+<script src="index.js"></script>
 </body>
 
 </html>
