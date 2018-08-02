@@ -7,7 +7,7 @@
     <title>NEW ENTRY Page</title>
     <link rel="stylesheet" href="main.css"/>
 </head>
-<body>
+<body onload="signedIn()">
     <header>
         <div id="Container">
             <div id="branding">
@@ -25,18 +25,18 @@
     </header>
         <div id='container'>
             <div id="diaryEntryDisplay">
-                <input type="date" name="date" required>
+               
             </br>
-                <input type="text" name='topic' placeholder="heading" required>
+                <input type="text" id="topic" name='topic' placeholder="title header" required>
             </br>
             <textarea id="subject" name="subject" placeholder="Write something.."
              style="height:200px"></textarea>
             </textarea>
-            <button>SAVE</button>
+            <button onclick="addDiary()"> SAVE </button>
             </div>
         </div>
             
     
-    
+<script src="posts.js"></script> 
 </body>
 </html>

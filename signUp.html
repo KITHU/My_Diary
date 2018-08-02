@@ -11,22 +11,23 @@
 
    <div class="signLogStyle">
         <h2 class="styleheading">Sign Up Here</h2>       
-        <form>
+        <form method="POST" action="#">
             <p class="stylepara">User Name:</p>
-            <input type="text" id="name" name="name">
+            <input type="text" id="name" name="name" autocomplete="name" required>
 
             <p class="stylepara">Email:</p>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" autocomplete="email" required>
 
             <p class="stylepara">Password:</p>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" required>
                 <div class="signLogFooter">
-                    <input type="submit" value="Sign up">
+                    <input type="button" value="Sign up" onclick="signup()">
                 
                     <h5>Already have an  account login <a href="login.html">here</a></h5>
                 </div>
         </form>
     </div>
 </div>
+<script src="index.js"></script>
 </body>
 </html>
