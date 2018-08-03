@@ -6,6 +6,11 @@ function signedIn(){
     getDiaries();
 }
 
+function logout(){
+    localStorage.clear();
+    window.location.reload(true);
+}
+
 function getDiaries(){
     token = localStorage.getItem('token')
     
@@ -20,6 +25,10 @@ function getDiaries(){
         }
     }).then(response => response.json())
     .then(data => {
+        if(data.msg ==="Token has expired"){
+            localStorage.clear()
+            window.location.replace("index.html");
+        }
         let diaries = data.diaries;
         let table = '';
         for(let counter = 0; counter< diaries.length; counter++){
@@ -78,8 +87,12 @@ function addDiary(){
         window.alert("title should be more than two characters");
         return;
     }
+
     let content = document.getElementById("subject").value;
-    
+    if(content.length <= 2){
+        window.alert("content should be a sentence");
+        return;
+    }
     
     let data = {
         title:title,
@@ -98,11 +111,21 @@ function addDiary(){
         }
     }).then(response => response.json())
     .then(data => {
-        console.log(data)
-         if(data.message==="content saved successfully"){
+        if(data.msg ==="Token has expired"){
+            localStorage.clear()
+            window.location.replace("index.html");
+        }  
+
+        if(data.message==="content saved successfully"){
              window.alert("ENTRY POSTED SUCCESSFULLY");
              window.location.replace("index.html");
-         }//if(data.access_token){
+        }
+
+         if(data.error ==="content cannot be null"){
+             window.alert("content cannot be empty!");
+         }
+         console.log(data)
+         //if(data.access_token){
         //     localStorage.setItem('token',data.access_token );
         //     window.location.replace("index.html");
         // }"message": "content saved successfully"

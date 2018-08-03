@@ -1,3 +1,8 @@
+function logout(){
+    localStorage.clear();
+    window.location.reload(true);
+}
+
 function login(){
     let url = 'https://tranquil-spire-14325.herokuapp.com/mydiary/v1/auth/login';
     let email = document.getElementById("email").value;
