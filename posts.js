@@ -20,16 +20,41 @@ function getDiaries(){
         }
     }).then(response => response.json())
     .then(data => {
-        console.log(data)
-        let diaries = data.diaries
-
+        let diaries = data.diaries;
+        let table = '';
         for(let counter = 0; counter< diaries.length; counter++){
-            window.alert(diaries[counter]["content"]);
-            window.alert(diaries[counter]["title"]);
-            window.alert(diaries[counter]["date_written"]);
-            window.alert(diaries[counter]["diary_id"]);
+            
+            let content = diaries[counter]["content"];
+            let title = diaries[counter]["title"];
+            let ddate = diaries[counter]["date_written"];
+            let id = diaries[counter]["diary_id"];
 
+            // window.alert(diaries[counter]["title"]);
+            // window.alert(diaries[counter]["date_written"]);
+            // window.alert(diaries[counter]["diary_id"]);
+
+            table += `<table><tr><td><a> ${title} </a></td><td>\
+                        ${ddate} </td></tr><tr><td colspan="2">\
+                        ${content} </td></tr></table>`;
         }
+
+        document.getElementById("all_diaries").innerHTML = table;
+
+
+        // <table>
+        //             <tr>
+        //                 <td><a>MY SECOND ENTRY</a></td>
+        //                 <td>14/7/2018</td>
+        //             </tr>
+        //             <tr>
+        //                 <td colspan="2">
+        //                      I am working on my Diary ui late at night.
+        //                         this will display all the data from the database
+        //                      I am working on my Diary ui late at night.
+        //                         this will display all the data from the database 
+        //                     </td>
+        //             </tr>
+        //         </table>
         
         // if(data.user==="invalid login credetials"){
         //     window.alert("invalid email or password")
