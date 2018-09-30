@@ -7,7 +7,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="main.css"/>
 </head>
-<body>
+<body onload="signedIn()">
     <header>
         <div id="Container">
             <div id="branding">
@@ -15,17 +15,18 @@
             </div>
             <nav>
             <ul>
-                <li><a>Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="newEntry.html">new diary entry</a></li>
                 <li><a href="account.html">Account</a></li>
-                <li><a href="login.html">log out</a></li>
+                <li><a href="login.html" onclick="logout()">log out</a></li>
             </ul>
             </nav>
         </div>
     </header>
         <div id='container'>
             <div id="diaryEntryDisplay">
-            <table>
+                <div id="all_diaries"></div>
+            <!-- <table>
                 <tr>
                     <td><a>MY FIRST ENTRY</a></td>
                     <td>13/7/2018</td>
@@ -53,11 +54,11 @@
                                 this will display all the data from the database 
                             </td>
                     </tr>
-                </table>
+                </table> -->
             </div>
         </div>
             
     
-    
+<script src="posts.js"></script>
 </body>
 </html>

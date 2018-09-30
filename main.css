@@ -74,6 +74,7 @@ color: #000;
 }
 /* style table home page display all the content */
 table{
+    width:80%;
     border: 1px solid rgba(83, 4, 231, 0.849);
     margin-top: 5px;
     background: rgba(0,0,0,0.6);
